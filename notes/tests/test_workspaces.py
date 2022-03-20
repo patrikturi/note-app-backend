@@ -1,10 +1,10 @@
 from django.test import Client, TestCase
 from notes.models.note import Note
 from notes.models.tag import Tag
-from notes.tests.test_utils import create_Alice, create_Bob, create_test_workspace
+from notes.tests.testutils import create_Alice, create_Bob, create_test_workspace
 
 
-class TestWorkspace(TestCase):
+class TestWorkspaces(TestCase):
 
     def setUp(self):
         self.client = Client()
