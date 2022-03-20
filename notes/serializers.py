@@ -1,4 +1,5 @@
 from rest_framework import serializers
+
 from . import models
 
 
@@ -17,7 +18,7 @@ class NoteSerializer(serializers.ModelSerializer):
 class NoteDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Note
-        fields = ('id', 'created', 'modified', 'title', 'tags', 'content')
+        fields = ('id', 'created', 'modified', 'workspace', 'title', 'tags', 'content')
 
 
 class WorkspaceSerializer(serializers.ModelSerializer):

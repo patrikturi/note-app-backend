@@ -1,4 +1,5 @@
 
+from notes.models.note import Note
 from notes.models.tag import Tag
 from notes.models.workspace import Workspace
 from users.models import User
@@ -18,3 +19,7 @@ def create_test_workspace(user_id: int) -> Workspace:
 
 def create_test_tag(workspace: Workspace) -> Tag:
     return Tag.objects.create(workspace=workspace, name='Test tag')
+
+
+def create_test_note(workspace: Workspace) -> Tag:
+    return Note.objects.create(workspace=workspace, title='Test note', content='Test note content')
