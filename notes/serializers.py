@@ -5,7 +5,7 @@ from . import models
 class TagSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Tag
-        fields = ('id', 'name')
+        fields = ('id', 'name', 'workspace')
 
 
 class NoteSerializer(serializers.ModelSerializer):

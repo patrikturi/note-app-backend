@@ -128,5 +128,3 @@ class TestWorkspace(TestCase):
         response = self.client.get(f'/api/notes/v1/workspaces/{self.workspace.id}/')
 
         self.assertEqual(404, response.status_code)
-
-# TODO: get with notes/tags
