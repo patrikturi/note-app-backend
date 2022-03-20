@@ -8,12 +8,13 @@ from . import serializers
 class WorkspaceViewset(viewsets.ModelViewSet):
     queryset = models.Workspace.objects.all()
 
-    def get_queryset(self):
-        user = self.request.user
-        return models.Workspace.objects.filter(owner=user)
+    # def get_queryset(self):
+    #     user = self.request.user
+    #     return models.Workspace.objects.filter(owner=user)
 
-    def get_permissions(self):
-        return [IsAuthenticated()]
+    # FIXME: only own notes
+    # def get_permissions(self):
+        # return [IsAuthenticated()]
 
     def get_serializer_class(self):
         if self.action == 'retrieve':

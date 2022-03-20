@@ -23,7 +23,7 @@ class NoteDetailSerializer(serializers.ModelSerializer):
 class WorkspaceSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Workspace
-        fields = ('id', 'name')
+        fields = ('id', 'name', 'owner')
 
 
 class WorkspaceDetailSerializer(serializers.ModelSerializer):
@@ -33,4 +33,4 @@ class WorkspaceDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.Workspace
-        fields = ('id', 'name', 'notebooks', 'notes', 'tags')
+        fields = ('id', 'name', 'owner', 'notes', 'tags')
