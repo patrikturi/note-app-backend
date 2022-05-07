@@ -2,7 +2,7 @@
 from notes.models.note import Note
 from notes.models.tag import Tag
 from notes.models.workspace import Workspace
-from users.models import User
+from registration.models import User
 
 
 def create_Bob() -> User:
