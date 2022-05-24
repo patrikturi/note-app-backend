@@ -17,6 +17,9 @@ class WorkspaceViewset(viewsets.ModelViewSet):
             return serializers.WorkspaceDetailSerializer
         return serializers.WorkspaceSerializer
 
+    def get_permissions(self):
+        return [IsAuthenticated()]
+
 
 class TagViewset(viewsets.ModelViewSet):
     queryset = models.Tag.objects.all()

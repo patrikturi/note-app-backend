@@ -12,7 +12,8 @@ class LoginView(APIView):
 
     def post(self, request: Request):
         if request.user.is_authenticated:
-            return Response({'message': 'Already logged in'}, status=HTTP_406_NOT_ACCEPTABLE)
+            username = request.user.username
+            return Response({'message': f'Already logged in as "{username}"'}, status=HTTP_406_NOT_ACCEPTABLE)
 
         serializer = LoginSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)

@@ -147,6 +147,10 @@ PASSWORD_HASHERS = [
     'django.contrib.auth.hashers.MD5PasswordHasher',
 ]
 
-CORS_ORIGIN_WHITELIST = (
-  'http://localhost:3000',
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = (
+    'http://localhost:3000',
 )
+CSRF_TRUSTED_ORIGINS = CORS_ALLOWED_ORIGINS
+
+CSRF_COOKIE_HTTPONLY = False
