@@ -9,7 +9,7 @@ class TestLogin(TestCase):
     def setUp(self):
         super().setUp()
         self.client = TestClient()
-        self.url = '/api/v1/auth/login/'
+        self.url = '/api/auth/v1/login/'
 
         self.valid_data = {'username': 'Bob', 'password': 'pass'}
         self.user = User(username='Bob')
@@ -41,7 +41,7 @@ class TestLogout(TestCase):
     def setUp(self):
         super().setUp()
         self.client = TestClient()
-        self.url = '/api/v1/auth/logout/'
+        self.url = '/api/auth/v1/logout/'
 
         self.user = User.objects.create(username='Bob')
 
