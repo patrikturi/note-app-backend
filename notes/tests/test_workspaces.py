@@ -119,7 +119,7 @@ class TestWorkspaces(TestCase):
 
         response = self.client.get(f'/api/notes/v1/workspaces/{self.workspace.id}/')
 
-        self.assertEqual(403, response.status_code)
+        self.assertEqual(401, response.status_code)
 
     def test_get_denied_for_other_user(self):
         alice = create_Alice()

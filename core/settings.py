@@ -138,7 +138,8 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
-    ]
+    ],
+    'EXCEPTION_HANDLER': 'core.restframework.custom_exception_handler'
 }
 
 # TODO: change this for production!
