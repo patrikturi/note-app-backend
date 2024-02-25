@@ -1,0 +1,8 @@
+- import notes
+- support tags (fe)
+- search
+- improve the editor
+- signup
+- encryption
+- daily backup
+- TODO: how to prevent editing on two machines at once
